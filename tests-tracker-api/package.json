@@ -1,0 +1,24 @@
+{
+  "name": "tests-tracker-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js",
+    "mig-gen":"sequelize migration:generate",
+    "mig-run" :"sequelize db:migrate",
+    "mig-und": "sequelize db:migrate:undo",
+    "sed-gen": "sequelize seed:generate",
+    "sed-run": "sequelize db:seed:all",
+    "sed-und": "sequelize db:seed:undo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "sequelize": "^6.37.8",
+    "sequelize-cli": "^6.6.5"
+  }
+}
