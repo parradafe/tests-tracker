@@ -1,0 +1,188 @@
+{
+	"categories": [
+		{
+			"categoryKey": "endurance",
+			"categoryName": "Endurance",
+			"tests": [
+				{
+					"id": "endurance-cooper-test",
+					"title": "Cooper Test",
+					"description": "Run as far as possible in 12 minutes to estimate aerobic capacity.",
+					"iconName": "Timer",
+					"duration": "12 min",
+					"intensity": "High",
+					"colorClass": "bg-blue-100 text-blue-600",
+					"isFeatured": true
+				},
+				{
+					"id": "endurance-yo-yo-ir1",
+					"title": "Yo-Yo IR1",
+					"description": "Intermittent shuttle test used to assess recovery and endurance performance.",
+					"iconName": "Activity",
+					"duration": "15 min",
+					"intensity": "High",
+					"colorClass": "bg-indigo-100 text-indigo-600",
+					"isFeatured": false
+				},
+				{
+					"id": "endurance-beep-test",
+					"title": "Beep Test",
+					"description": "Progressive shuttle run with increasing pace to evaluate aerobic fitness.",
+					"iconName": "Gauge",
+					"duration": "10 min",
+					"intensity": "High",
+					"colorClass": "bg-cyan-100 text-cyan-600",
+					"isFeatured": false
+				},
+				{
+					"id": "endurance-2k-row",
+					"title": "2K Row",
+					"description": "Timed 2000-meter rowing effort to measure endurance and pacing control.",
+					"iconName": "Waves",
+					"duration": "8 min",
+					"intensity": "Medium",
+					"colorClass": "bg-sky-100 text-sky-600",
+					"isFeatured": false
+				}
+			]
+		},
+		{
+			"categoryKey": "strength",
+			"categoryName": "Strength",
+			"tests": [
+				{
+					"id": "strength-1rm-squat",
+					"title": "1RM Squat",
+					"description": "Find the maximum load for one repetition in the back squat.",
+					"iconName": "Dumbbell",
+					"duration": "20 min",
+					"intensity": "Max",
+					"colorClass": "bg-rose-100 text-rose-600",
+					"isFeatured": true
+				},
+				{
+					"id": "strength-1rm-bench-press",
+					"title": "1RM Bench Press",
+					"description": "Assess upper-body maximal strength with a one-repetition maximum attempt.",
+					"iconName": "Sofa",
+					"duration": "18 min",
+					"intensity": "Max",
+					"colorClass": "bg-red-100 text-red-600",
+					"isFeatured": false
+				},
+				{
+					"id": "strength-deadlift-3rm",
+					"title": "Deadlift 3RM",
+					"description": "Measure posterior chain strength with a heavy 3-rep set.",
+					"iconName": "Scale",
+					"duration": "16 min",
+					"intensity": "High",
+					"colorClass": "bg-orange-100 text-orange-600",
+					"isFeatured": false
+				},
+				{
+					"id": "strength-pull-up-max-reps",
+					"title": "Pull-Up Max Reps",
+					"description": "Count strict pull-up repetitions to evaluate relative upper-body strength.",
+					"iconName": "BarChart3",
+					"duration": "6 min",
+					"intensity": "High",
+					"colorClass": "bg-amber-100 text-amber-600",
+					"isFeatured": false
+				}
+			]
+		},
+		{
+			"categoryKey": "mobility",
+			"categoryName": "Mobility",
+			"tests": [
+				{
+					"id": "mobility-overhead-squat",
+					"title": "Overhead Squat Screen",
+					"description": "Evaluate ankle, hip, thoracic, and shoulder mobility in one movement pattern.",
+					"iconName": "Move",
+					"duration": "8 min",
+					"intensity": "Low",
+					"colorClass": "bg-emerald-100 text-emerald-600",
+					"isFeatured": true
+				},
+				{
+					"id": "mobility-active-straight-leg-raise",
+					"title": "Active Straight Leg Raise",
+					"description": "Check hamstring flexibility and pelvic control with unilateral raises.",
+					"iconName": "ArrowUp",
+					"duration": "5 min",
+					"intensity": "Low",
+					"colorClass": "bg-green-100 text-green-600",
+					"isFeatured": false
+				},
+				{
+					"id": "mobility-shoulder-flexion-wall-test",
+					"title": "Shoulder Flexion Wall Test",
+					"description": "Measure shoulder overhead range while maintaining neutral spine position.",
+					"iconName": "Accessibility",
+					"duration": "4 min",
+					"intensity": "Low",
+					"colorClass": "bg-lime-100 text-lime-600",
+					"isFeatured": false
+				},
+				{
+					"id": "mobility-ankle-dorsiflexion-knee-to-wall",
+					"title": "Ankle Dorsiflexion Knee to Wall",
+					"description": "Assess ankle mobility by tracking maximal knee travel over the foot.",
+					"iconName": "Footprints",
+					"duration": "4 min",
+					"intensity": "Low",
+					"colorClass": "bg-teal-100 text-teal-600",
+					"isFeatured": false
+				}
+			]
+		},
+		{
+			"categoryKey": "speed",
+			"categoryName": "Speed",
+			"tests": [
+				{
+					"id": "speed-10m-sprint",
+					"title": "10m Sprint",
+					"description": "Short acceleration sprint to evaluate initial speed and first-step power.",
+					"iconName": "Rabbit",
+					"duration": "5 min",
+					"intensity": "Max",
+					"colorClass": "bg-violet-100 text-violet-600",
+					"isFeatured": true
+				},
+				{
+					"id": "speed-30m-sprint",
+					"title": "30m Sprint",
+					"description": "Measure acceleration and transition to maximal running velocity.",
+					"iconName": "Zap",
+					"duration": "8 min",
+					"intensity": "Max",
+					"colorClass": "bg-fuchsia-100 text-fuchsia-600",
+					"isFeatured": false
+				},
+				{
+					"id": "speed-flying-20m",
+					"title": "Flying 20m",
+					"description": "Track top-speed performance over a timed flying segment.",
+					"iconName": "Gauge",
+					"duration": "8 min",
+					"intensity": "High",
+					"colorClass": "bg-purple-100 text-purple-600",
+					"isFeatured": false
+				},
+				{
+					"id": "speed-505-agility-test",
+					"title": "505 Agility Test",
+					"description": "Evaluate deceleration and change-of-direction speed under timed conditions.",
+					"iconName": "Shuffle",
+					"duration": "10 min",
+					"intensity": "High",
+					"colorClass": "bg-pink-100 text-pink-600",
+					"isFeatured": false
+				}
+			]
+		}
+	]
+}
