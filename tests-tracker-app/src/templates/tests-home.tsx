@@ -17,14 +17,22 @@ const categoryIconMap: Record<string, React.ReactNode> = {
 
 const SportsDashboard: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState(categoriesData.categories[0].categoryKey);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const currentCategory =
     categoriesData.categories.find((c) => c.categoryKey === activeCategory) ??
     categoriesData.categories[0];
 
+  const filteredTests = searchQuery.trim()
+    ? categoriesData.categories.flatMap((c) => c.tests).filter((t) =>
+        t.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        t.description.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : currentCategory.tests;
+
   return (
-    <div className="bg-slate-50 dark:bg-[#0F172A] text-slate-900 dark:text-slate-100 min-h-screen font-['Plus_Jakarta_Sans']">
-      <div className="max-w-md mx-auto min-h-screen flex flex-col relative bg-white dark:bg-[#0F172A]">
+    <div className="bg-slate-50 dark:bg-[#0F172A] text-slate-900 dark:text-slate-100 h-screen font-['Plus_Jakarta_Sans']">
+      <div className="w-full max-w-md mx-auto h-full flex flex-col overflow-hidden bg-white dark:bg-[#0F172A]">
 
         {/* Header */}
         <header className="p-6 flex items-center justify-between">
@@ -52,6 +60,8 @@ const SportsDashboard: React.FC = () => {
               className="w-full bg-slate-50 dark:bg-slate-800 border-none rounded-2xl py-4 pl-12 pr-4 text-sm focus:ring-2 focus:ring-indigo-500/20 transition-all"
               placeholder="Search tests..."
               type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
         </div>
@@ -84,15 +94,15 @@ const SportsDashboard: React.FC = () => {
           <div className="flex-1 px-6 overflow-y-auto no-scrollbar pb-32">
             <div className="flex items-center justify-between mb-6 pt-2">
               <h2 className="text-xl font-extrabold text-slate-800 dark:text-white">
-                {currentCategory.categoryName} Tests
+                {searchQuery.trim() ? 'Search Results' : `${currentCategory.categoryName} Tests`}
               </h2>
               <span className="bg-indigo-100 dark:bg-indigo-900 text-indigo-600 text-[10px] font-bold px-2 py-1 rounded-full uppercase">
-                {currentCategory.tests.length} Available
+                {filteredTests.length} Available
               </span>
             </div>
 
             <div className="space-y-4">
-              {currentCategory.tests.map((test) => (
+              {filteredTests.length > 0 ? filteredTests.map((test) => (
                 <TestCard
                   key={test.id}
                   title={test.title}
@@ -103,7 +113,19 @@ const SportsDashboard: React.FC = () => {
                   colorClass={test.colorClass}
                   isFeatured={test.isFeatured}
                 />
-              ))}
+              )) : (
+                <div className="bg-white dark:bg-slate-800 rounded-[32px] p-5 shadow-sm border border-transparent">
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="bg-slate-100 dark:bg-slate-700 text-slate-400 dark:text-slate-500 p-3 rounded-2xl">
+                      <Search />
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-1">No tests found</h3>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                    No results for <span className="font-semibold">"{searchQuery}"</span>. Try a different keyword.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </main>
